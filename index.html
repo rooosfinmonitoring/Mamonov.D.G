@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Анкета — Мамонов Дмитрий Геннадьевич • Росфинмониторинг</title>
+  <meta name="description" content="Анкета ведущего специалиста-эксперта Росфинмониторинга: Мамонов Дмитрий Геннадьевич. Образование, опыт, контакты." />
+  <meta name="color-scheme" content="light dark">
+  <style>
+    :root{
+      --rfm-deep:#003a6e; --rfm-blue:#0b5cab; --rfm-accent:#1976d2;
+      --bg:#f7f9fc; --card:#ffffff; --ink:#0f172a; --muted:#475569;
+      --ring: color-mix(in oklab, var(--rfm-blue), white 60%);
+      --shadow: 0 10px 30px rgba(0,0,0,.10); --radius: 18px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0b1220; --card:#0f172a; --ink:#e5e7eb; --muted:#9aa3b2; --shadow:0 10px 30px rgba(0,0,0,.35); }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    a{color:var(--rfm-accent);text-decoration:none} a:hover{text-decoration:underline}
+
+    .container{max-width:1320px;margin-inline:auto;padding:24px}
+
+    .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,color-mix(in oklab,var(--card),transparent 0%) 30%,transparent 100%);backdrop-filter:saturate(1.1) blur(8px);border-bottom:1px solid color-mix(in oklab,var(--ring),transparent 60%)}
+    .nav-inner{display:flex;align-items:center;gap:16px;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px}
+    .badge{width:38px;height:38px;border-radius:10px;background:radial-gradient(120% 120% at 10% 10%,var(--rfm-blue),var(--rfm-deep));box-shadow:inset 0 0 0 2px color-mix(in oklab,white,transparent 85%),var(--shadow)}
+    .brand h1{font-size:16px;margin:0;font-weight:700;letter-spacing:.2px}
+    .menu a{padding:10px 12px;border-radius:10px}
+    .menu a:hover{background:color-mix(in oklab,var(--rfm-blue),transparent 85%)}
+
+    /* Hero / верхний блок */
+    .hero{display:grid;gap:28px;align-items:start;grid-template-columns: 1.7fr .7fr;padding-block:28px}
+    @media (max-width: 1200px){ .hero{grid-template-columns:1fr} }
+    .title{font-size:clamp(24px,3.6vw,38px);line-height:1.2;margin:0 0 6px 0}
+    .subtitle{color:var(--muted);margin:0 0 18px 0}
+    .keyfacts{display:flex;flex-wrap:wrap;gap:10px}
+    .chip{font-size:14px;padding:8px 12px;border-radius:999px;background:color-mix(in oklab,var(--rfm-blue),white 88%);border:1px solid color-mix(in oklab,var(--rfm-blue),transparent 70%)}
+
+    /* Фото удостоверения — без подписи; на средних экранах уходит ниже текста */
+    .id-card{order:2;position:relative;border-radius:22px;overflow:hidden;background:var(--card);box-shadow:var(--shadow);border:1px solid color-mix(in oklab,var(--ring),transparent 20%);aspect-ratio: 2048 / 1530;cursor:zoom-in}
+    @media (min-width:1201px){ .id-card{order:2} } /* справа на широких */
+    .id-card img{width:100%;height:100%;object-fit:cover;display:block}
+    .id-card:focus-visible{outline:4px solid var(--ring);outline-offset:3px}
+
+    /* Карточки */
+    .grid{display:grid;gap:20px;grid-template-columns:1fr 1fr}
+    @media (max-width: 980px){ .grid{grid-template-columns:1fr} }
+    .card{background:var(--card);border:1px solid color-mix(in oklab,var(--ring),transparent 20%);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 12px 0;font-size:20px}
+
+    /* Шире и читабельнее */
+    .kv{
+      display:grid;
+      grid-template-columns: 190px 1fr;    /* шире колонка со значениями */
+      gap:12px 24px;
+      font-size:16px;
+    }
+    .kv div:nth-child(odd){color:var(--muted)}
+    .kv div:nth-child(even){hyphens:auto;word-break:break-word}
+
+    .bullets{margin:0;padding-left:20px}
+    .bullets li{margin:6px 0}
+
+    /* Лайтбокс */
+    .lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:color-mix(in oklab, black, transparent 35%);backdrop-filter:blur(2px);z-index:100}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:95vw;max-height:90vh;border-radius:14px;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+    .lb-ui{position:absolute;inset:0;display:flex;align-items:flex-start;justify-content:space-between;pointer-events:none}
+    .lb-btn{pointer-events:auto;margin:16px;border:none;border-radius:999px;padding:10px 14px;font-size:14px;background:color-mix(in oklab,var(--rfm-deep),transparent 0%);color:#fff;box-shadow:0 10px 20px rgba(0,0,0,.25);cursor:pointer}
+    .lb-btn:hover{filter:brightness(1.05)}
+
+    footer{margin-top:28px;border-top:1px dashed color-mix(in oklab,var(--rfm-blue),transparent 70%);background:
+      radial-gradient(40% 90% at 0% 0%, color-mix(in oklab,var(--rfm-blue),transparent 92%), transparent 80%),
+      linear-gradient(180deg, color-mix(in oklab,var(--rfm-deep),transparent 92%), transparent 50%)}
+    .footer-grid{display:grid;gap:10px;grid-template-columns:2fr 1fr}
+    .small{font-size:14px;color:var(--muted)}
+    .contacts a{color:inherit}
+    .pill{display:inline-block;border:1px solid color-mix(in oklab,var(--rfm-blue),transparent 60%);border-radius:999px;padding:6px 10px;font-size:13px;margin-right:8px}
+
+    :is(a,button,[tabindex]):focus-visible{outline:3px solid var(--ring);outline-offset:2px;border-radius:12px}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="badge" aria-hidden="true"></div>
+        <h1>Росфинмониторинг • Анкета специалиста</h1>
+      </div>
+      <div class="menu">
+        <a href="#profile">Профиль</a>
+        <a href="#edu">Образование</a>
+        <a href="#exp">Опыт</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="container hero" id="profile" role="banner">
+    <div>
+      <p class="subtitle">Ведущий специалист-эксперт</p>
+      <h2 class="title">Мамонов Дмитрий Геннадьевич</h2>
+      <div class="keyfacts" id="keyfacts">
+        <span class="chip">Пол: мужской</span>
+        <span class="chip">Дата рождения: 17.04.1997</span>
+        <span class="chip" id="ageChip" title="Возраст рассчитывается автоматически"></span>
+        <span class="chip">Сфера: ПОД/ФТ, финмониторинг</span>
+      </div>
+
+      <div class="grid" style="margin-top:16px">
+        <section class="card">
+          <h3>Краткая информация</h3>
+          <div class="kv">
+            <div>ФИО</div><div>Дюкова Елена Николаевна</div>
+            <div>Должность</div><div>Ведущий специалист-эксперт Росфинмониторинга</div>
+            <div>Профиль</div><div>Противодействие отмыванию доходов и финансированию терроризма (ПОД/ФТ), финансовый мониторинг</div>
+            <div>Начало службы</div><div>2023&nbsp;г.</div>
+            <div>Ключевые навыки</div>
+            <div>• правовой анализ и подготовка документов; • проверка и аналитика операций, риск-оценка; • взаимодействие с субъектами ПОД/ФТ и госорганами</div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Компетенции</h3>
+          <ul class="bullets">
+            <li><b>Нормативная база:</b> ФЗ-115, подзаконные акты, методрекомендации; риск-ориентированный подход.</li>
+            <li><b>Практика:</b> анализ сделок и источников средств, подготовка запросов/ответов, ведомственные процедуры и отчётность.</li>
+            <li><b>Инструменты:</b> финмониторинг, аналитические отчёты, проверочные мероприятия, контроль сроков и качества.</li>
+            <li><b>Коммуникации:</b> взаимодействие с органами власти и надзором, участие в конкурсных процедурах госслужбы.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <!-- Фото удостоверения. На средних/узких экранах будет ниже текста -->
+    <figure class="id-card" id="idCard" role="button" tabindex="0" aria-label="Открыть удостоверение во весь экран">
+      <img id="idPhoto" src="assets/img/udostoverenie-2048x1530.jpg" alt="Удостоверение сотрудника (фото 2048×1530)">
+    </figure>
+  </header>
+
+  <main class="container">
+    <section class="card" id="edu" aria-label="Образование">
+      <h3>Образование</h3>
+      <div class="timeline" id="timeline-edu">
+        <div class="t-item"><div class="t-dot"></div><div class="t-card"><div class="t-year">2015&nbsp;→&nbsp;2019 — МГИМО, Международно-правовой факультет</div><div class="t-desc">Программа «Юриспруденция» (очная форма), фундаментальная правовая подготовка.</div></div></div>
+        <div class="t-item"><div class="t-dot"></div><div class="t-card"><div class="t-year">2019&nbsp;→&nbsp;2021 — Магистратура, МГИМО</div><div class="t-desc">Международное финансовое право; правовое обеспечение интеграционных проектов.</div></div></div>
+        <div class="t-item"><div class="t-dot"></div><div class="t-card"><div class="t-year">После 2021 — Курсы и инструктажи по ПОД/ФТ</div><div class="t-desc">Повышение квалификации, практика/стажировка и участие в конкурсах на госслужбу.</div></div></div>
+      </div>
+    </section>
+
+    <section class="card" id="exp" aria-label="Опыт">
+      <h3>Практика и служба</h3>
+      <div class="timeline" id="timeline-exp">
+        <div class="t-item"><div class="t-dot"></div><div class="t-card"><div class="t-year">Практика — Росфинмониторинг</div><div class="t-desc">Работа с материалами финмониторинга, аналитикой и регламентами ПОД/ФТ в профильных подразделениях.</div></div></div>
+        <div class="t-item"><div class="t-dot"></div><div class="t-card"><div class="t-year">С 2023 — Ведущий специалист-эксперт</div><div class="t-desc">Анализ операций, взаимодействие с субъектами ПОД/ФТ, подготовка документов и материалов в пределах компетенции.</div></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacts">
+    <div class="container footer-grid">
+      <section class="contacts">
+        <h3 style="margin:14px 0 6px 0">Контактная информация Росфинмониторинга</h3>
+        <p class="small">
+          Адрес (приём граждан): 107450, г. Москва, ул. Мясницкая, д. 39, стр. 1.<br>
+          Общие контакты: <a href="mailto:info@fedsfm.ru">info@fedsfm.ru</a>, код города: +7&nbsp;(495).<br>
+          Официальный сайт: <a href="https://www.fedsfm.ru" target="_blank" rel="noopener">fedsfm.ru</a>
+        </p>
+      </section>
+      <section>
+        <h3 style="margin:14px 0 6px 0">Быстрые ссылки</h3>
+        <p>
+          <span class="pill"><a href="#profile">Профиль</a></span>
+          <span class="pill"><a href="#edu">Образование</a></span>
+          <span class="pill"><a href="#exp">Опыт</a></span>
+        </p>
+        <p class="small">© <span id="year"></span> Росфинмониторинг • Анкета специалиста</p>
+      </section>
+    </div>
+  </footer>
+
+  <!-- Лайтбокс -->
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Просмотр удостоверения">
+    <div class="lb-ui">
+      <button class="lb-btn" id="lbBack" title="Назад">← Назад</button>
+      <button class="lb-btn" id="lbClose" title="Закрыть (Esc)">Закрыть ✕</button>
+    </div>
+    <img src="" alt="Удостоверение, полноразмерное" id="lbImg">
+  </div>
+
+  <script>
+    // Возраст
+    (function(){
+      const birth = new Date(1997,3,17);
+      const now = new Date();
+      let age = now.getFullYear() - birth.getFullYear();
+      const m = now.getMonth() - birth.getMonth();
+      if (m < 0 || (m === 0 && now.getDate() < birth.getDate())) age--;
+      const chip = document.getElementById('ageChip');
+      if (chip) chip.textContent = `Возраст: ${age} лет`;
+    })();
+
+    // Плавный скролл
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); history.replaceState(null,'','#'+id); }
+      })
+    });
+
+    // Анимация таймлайна
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){ entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, {threshold: .1});
+    document.querySelectorAll('.t-item').forEach(n=>observer.observe(n));
+
+    // Лайтбокс — единая функция закрытия, чтобы ВСЕГДА возвращать прокрутку
+    const idCard = document.getElementById('idCard');
+    const idPhoto = document.getElementById('idPhoto');
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+    const btnClose = document.getElementById('lbClose');
+    const btnBack = document.getElementById('lbBack');
+
+    function openLightbox(){
+      lbImg.src = idPhoto.src;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      history.pushState({lightbox:true}, '', '#photo');
+    }
+    function reallyCloseLightbox(){
+      lb.classList.remove('open');
+      document.body.style.overflow = '';  // <- главный фикс прокрутки
+      if (location.hash === '#photo') {
+        history.replaceState(null, '', ' '); // без хэша
+      }
+    }
+
+    idCard.addEventListener('click', openLightbox);
+    idCard.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); openLightbox(); } });
+
+    btnBack.addEventListener('click', reallyCloseLightbox);
+    btnClose.addEventListener('click', reallyCloseLightbox);
+    lb.addEventListener('click', (e)=>{ if(e.target === lb) reallyCloseLightbox(); });
+    window.addEventListener('keyup', (e)=>{ if(e.key==='Escape') reallyCloseLightbox(); });
+
+    // Аппаратная "Назад"
+    window.addEventListener('popstate', (e)=>{
+      // если закрыли состояние lightbox
+      if(!(e.state && e.state.lightbox)){ reallyCloseLightbox(); }
+    });
+
+    // Год в подвале
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
